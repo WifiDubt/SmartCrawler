@@ -1,0 +1,17 @@
+{
+    "name": "wifidubt/smart-crawler",
+    "description": "Laravel easy crawling system",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Wifidubt\\SmartCrawler\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WifiDubt",
+            "email": "filowps@gmail.com"
+        }
+    ],
+    "require": {}
+}
