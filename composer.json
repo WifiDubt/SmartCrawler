@@ -13,5 +13,9 @@
             "email": "filowps@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^8.2",
+        "symfony/dom-crawler": "^7.1",
+        "illuminate/collections": "^11.11"
+    }
 }
