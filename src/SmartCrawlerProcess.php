@@ -9,22 +9,20 @@ class SmartCrawlerProcess {
     public array $params = [];
     public string|null $itemId = null;
 
-    public function handle() : Crawler {
+    public function handle() : array {
         $url = $this->url."?".http_build_query($this->params);
 
         $html = file_get_contents($url);
         $crawler = new Crawler($html);
 
-        $this->crawl($crawler);
-
-        return true;
+        return $this->crawl($crawler);
     }
 
-    public function crawl(Crawler $crawler) {
+    public function crawl(Crawler $crawler) : array {
         $items = [];
 
-        if (!empty($itemId)) {
-            $itemsCrawler = $crawler->filter($itemId);
+        if (!empty($this->itemId)) {
+            $itemsCrawler = $crawler->filter($this->itemId);
             foreach ($itemsCrawler as $item) {
                 $item = new Crawler($item);
                 $items[] = $this->crawlItem($item);
