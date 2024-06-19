@@ -4,7 +4,7 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Wifidubt\\SmartCrawler\\": "src/"
+            "WifiDubt\\SmartCrawler\\": "src/"
         }
     },
     "authors": [
@@ -16,6 +16,14 @@
     "require": {
         "php": "^8.2",
         "symfony/dom-crawler": "^7.1",
-        "illuminate/collections": "^11.11"
+        "illuminate/collections": "^10|^11.11",
+        "illuminate/support": "^10|^11.11"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WifiDubt\\SmartCrawler\\SmartCrawlerServiceProvider"
+            ]
+        }
     }
 }
